@@ -1,6 +1,6 @@
 * {margin:0; padding:0; border:0;
     font-family: 'Titillium Web', sans-serif;}
- html, body {
+html, body {
      width: auto;
      height: 100%;
      font-family:Verdana, Geneva, sans-serif;
@@ -9,37 +9,30 @@
      background-size:auto;
      background-repeat: no-repeat; 
      background-size: cover;
- }
- header{
-     position:relative;
-     background-color:transparent;
+}
+header{
      color:rgb(255, 255, 255);
-     width:98%;
-     height:13%;
-     margin: 0px auto;}
- nav{
-     position:relative;
-     background-color:#CC9;
-     color:#FFF;
-     width:98%;
-     height:13%;
-     margin: 0px auto;}
- section{
+     align-items: center;
+}
+
+.bancos_principales{ 
+      
+}
+section{
      align-self: center;
-     position:relative;
      float:center;
      background-color:transparent;
      width:98%;
      height:55%;
      color:#FFF;
- }
+}
  article{
      align-items: center;
      background-color:transparent;
      width:98%;
      height:58%;
      color:#FFF;
- }
+}
  aside{
      position:relative;
      background-color:#7A7;
@@ -47,7 +40,7 @@
      height:55%;
      color:#FFF;
      float:left;
- }
+}
  footer{
      position:relative; 
     background-color:#AA7;
@@ -55,7 +48,7 @@
     height:5%;
     color:#FFF;
     clear:both;
- }
+}
 header,section,footer,aside,article,nav{
 -webkit-border-radius: 10px;
 -moz-border-radius: 10px;
