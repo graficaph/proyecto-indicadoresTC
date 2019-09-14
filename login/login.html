@@ -5,45 +5,91 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Indicadores TC</title>
-    <link rel="stylesheet" href="css/estyles.css">
+    <link rel="stylesheet" href="estyles.css">
+    <link rel="stylesheet" href="login.js">
 </head>
 <body>
-  <header>
-      <div>
-        <a href="index.html">
-            <img src="images/logocorpo.jpg" alt="Logocorporativo" id="logo-corporativo"> 
-        </a>
-        
-        <h1>Alpha-Bank</h1>
-        
-      </div>
-  </header>
-  <section id="home-cover-main">
-      <img src="images/black-creditcards.jpg" alt="home_firts">                
-      <div class="margin-bottom-sm">
-          <p class="title-font margin-bottom-lg margin-top-lg text-center">Iniciar Sesión</p>              
-            <div  class="login-info">
-              <div class="login-inputs">
-                  Usuario: <input type="usuario" name="" value="">
-                  Password: <input type="password" name="" value="">
-              <button class="confirm-button margin-top-sm" style="align-self: center; width:50%;" type="button" name="button">
-                  Entrar
-              </button>
-            </div>              
-            </div>
-      </div>              
-    </section>
-    <footer>
-        <div>
-            <a href="#">Cambiar Usuario</a>
-            <a href="#">¿Olvidaste tu contraseña?</a>
-            <h6>
-                <p2>Estos indicadores estan construidos con base a cifras reportadas por los informes trimestrales del Banco de México</p2>
-            </h6>  
-    
-        </div>
+    <div class="login-wrap">
+        <div class="header">
+                <div class="header_logo">
+                        <img src="images/logocorpo.jpg" />
+                        <h1 class="login-logo">Alpha-Bank</h1> 
+                </div>
 
-    </footer>                
+        </div>
+            
+      <!-- multistep form -->
+        <form id="msform">
+        <!-- progressbar -->
+        <ul id="progressbar">
+            <li class="active">Account Setup</li> 
+            <li>Registrate</li>
+            <li>Crea tu Cuenta</li>        
+        </ul>
+        <!-- fieldsets -->
+        <fieldset>
+            <h2 class="fs-title">Welcome to Creditcards Portafolio</h2>
+            <h3 class="fs-subtitle">Log-In</h3>
+            <input type="text" name="email" placeholder="Email" />
+            <input type="password" name="pass" placeholder="Password" />
+            <input type="button" name="login" class="login-button" value="Entrar" />
+            <input type="hidden" id="login-type" name="login-type" value="fullpage">
+            <div id="login-error"></div>
+            <a href="#" id="forgot-password-link" class="forgot-password-link">
+                    ¿Olvidaste el Password?
+                    </a>
+            <input type="button" name="next" class="next action-button" value="New Account" />
+            
+        </fieldset>
+        
+        <fieldset>
+            <h2 class="fs-title">Registra tus Datos Personales</h2>
+            <h3 class="fs-subtitle">Paso 1</h3>
+            <input type="text" name="fname" placeholder="Nombres" />
+            <input type="text" name="lname" placeholder="Apellidos" />
+            <input type="text" name="phone" placeholder="Teléfono" />
+            <input type="submit" name="submit" class="submit action-button" value="Salvar" />
+            <input type="button" name="next" class="next action-button" value="Siguiente" />
+        </fieldset>
+    
+        <fieldset>
+            <h2 class="fs-title">Crea tu Cuenta</h2>
+            <h3 class="fs-subtitle">Paso 2</h3>
+            <input type="text" name="email" placeholder="Email" />
+            <input type="password" name="pass" placeholder="Password" />
+            <input type="password" name="cpass" placeholder="Confirma tu Password" />
+            <input type="button" name="previous" class="previous action-button" value="Anterior" />
+            <input type="button" name="next" class="next action-button" value="Siguiente" />
+        </fieldset>
+    
+    
+        <form class="forgot-password-form login-form top-label-form" id="forgot-password-form" action="#0">
+        <h3>Recupera tu Password</h3>
+            <div class="field">
+                <label for="forgot-email">By Email</label>
+                <input type="text" id="forgot-email" name="forgot-email" placeholder="your@email.com" required="">
+            </div>
+            <div class="field">
+                <input id="forgot-email-btn" type="submit" value="Sendme New Password Reset by Email" class="button button-medium">
+            </div>
+            <div id="sent-message">
+                <div id="sent-message-message"></div>
+            </div>
+        </form>        
+
+    </div>
+    
+
+<footer>
+    <div>
+
+        <h6>
+            <p2>Estos indicadores estan construidos con base a cifras reportadas por los informes trimestrales del Banco de México</p2>
+        </h6>  
+    
+    </div>
+
+</footer>                
 
 </body>
 </html>
